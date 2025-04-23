@@ -131,7 +131,7 @@ def send_email(name, contact, jee_rank, category, city):
 
 
 # Load JoSAA data
-josaa_df = pd.read_csv("data/JOSAA.csv")
+josaa_df = pd.read_csv("JOSAA.csv")
 josaa_df.columns = josaa_df.columns.str.strip().str.replace(' ', '_')
 josaa_df['Closing_Rank'] = josaa_df['Closing_Rank'].astype(str).str.replace('P', '', regex=False)
 josaa_df['Closing_Rank'] = pd.to_numeric(josaa_df['Closing_Rank'], errors='coerce')
